@@ -1,0 +1,40 @@
+{
+  "name": "folder-list-app",
+  "version": "1.0.0",
+  "description": "full stack web app extended todo-list",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "client": "npm run start --prefix client",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "engines": {
+    "node": "14.15.3",
+    "npm": "6.14.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramankarki/folder-list-app.git"
+  },
+  "author": "raman karki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramankarki/folder-list-app/issues"
+  },
+  "homepage": "https://github.com/ramankarki/folder-list-app#readme",
+  "dependencies": {
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.12",
+    "node-sass": "^4.14.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "morgan": "^1.10.0"
+  }
+}
